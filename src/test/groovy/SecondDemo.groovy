@@ -1,12 +1,12 @@
-import spock.lang.Specification
-import static io.restassured.RestAssured.given
-
 /**
  *
  * @author Jane* @date 2020-02-10 9:46 PM
  *
  *
  * */
+import spock.lang.Specification
+import static io.restassured.RestAssured.given
+
 class SecondDemo extends Specification {
 
     def "should get user details by user name successfully"() {

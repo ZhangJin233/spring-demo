@@ -1,6 +1,3 @@
-import spock.lang.Specification
-import static io.restassured.RestAssured.given
-
 /**
  *
  * @author Jane* @date 2020-02-10 9:01 PM
@@ -8,6 +5,10 @@ import static io.restassured.RestAssured.given
  *
  *
  * */
+
+import spock.lang.Specification
+import static io.restassured.RestAssured.given
+
 
 class FirstDemo extends Specification {
 
