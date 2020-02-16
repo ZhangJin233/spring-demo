@@ -6,11 +6,19 @@
  * */
 package db
 
+import file.FileService
 import groovy.sql.Sql
 
 
-class DataSource {
+class DataSourceNew {
     Sql sql
+    FileService fileService
+    def configs
+//   mysql基本配置从 config.yml 中读取
+    DataSourceNew() {
+        fileService = new FileService()
+        configs = fileService.getConfigs('./src/test/resources/com.spring.demo/config/config.yml')
+    }
 
     Sql getSql() {
         if (!sql) {

@@ -6,7 +6,7 @@ package db
  * 负责执行 SQL
  *
  * */
-class DataRepository extends DataSource {
+class DataRepository extends DataSourceNew {
     def getUserInfo() {
         def userInfo = sql.rows(ConstantSql.getUserInfo)  //查询多行数据
         userInfo ? userInfo : ''      //这里做了空保护
