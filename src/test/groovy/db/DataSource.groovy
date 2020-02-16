@@ -17,7 +17,7 @@ class DataSource {
         if (!sql) {
             def mysqlDB = [
                     driver  : 'com.mysql.jdbc.Driver',
-                    url     : 'jdbc:mysql://localhost:3306/apitestdb',
+                    url     : 'jdbc:mysql://localhost:3306/apitestdb?useUnicode=true&characterEncoding=UTF-8&useSSL=true&zeroDateTimeBehavior=convertToNull',
                     user    : 'root',
                     password: 'root12345'
             ]
