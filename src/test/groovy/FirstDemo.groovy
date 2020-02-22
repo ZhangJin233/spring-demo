@@ -15,7 +15,7 @@ class FirstDemo extends Specification {
     def "should call mock api successfully"() {    //spock框架（BDD框架）语法，所有case都是def开头，def后面是该case的描述信息
         given: "no given"                         //spock框架语法，given-when-then三段式写法，given/when/then后是描述信息
         when: "call mock api api"
-        given().port(9090)
+        given().baseUri("http://localhost:9090")
                 .when()
                 .get("api/getUserDetails")        //输入接口的地址
                 .then()
