@@ -28,4 +28,32 @@ class TestCase extends Specification {
         "China" | ""
         "USA"   | ""
     }
+
+    def "get contact from resume"(){
+        given: "no given"
+        when: "call the get resume api"
+        def res = resumeClient.getResumeDetails()
+        then: "println out contacts info"
+        println resumeService.getContactPhone(res)
+    }
+
+    def "println language skill if person with it"(){
+        given: "no given"
+        when: "call the get resume api"
+        def res = resumeClient.getResumeDetails()
+        then: "println out contacts info"
+        println resumeService.printIfPersonWIthSpecialSkill(res,language)
+        where:
+        language | placeHolder
+        "Java"   | ""
+    }
+
+    def "get all working experience"(){
+        given: "no given"
+        when: "call the get resume api"
+        def res = resumeClient.getResumeDetails()
+        then: "println out contacts info"
+        println resumeService.printWorkingDetails(res)
+
+    }
 }
