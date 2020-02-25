@@ -5,14 +5,14 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 3,
-      "pattern": "[A-Z]"    //定义name字段的值长度是1-3个字符，只能是A-Z的字母组合
+      "pattern": "[A-Z]"
     },
     "age": {
-      "type": "number",    //定义age字段值是20-50
+      "type": "number",
       "minimum": 20,
       "maximum": 50
     },
-    "birthPlace": {        //定义birthPlace中包含四个字段，country，city，state，street
+    "birthPlace": {
       "type": "object",
       "required": [
         "country",
@@ -35,7 +35,7 @@
         }
       }
     },
-    "contacts": {         //定义contacts是一个数组，数组中每个值是一个object对象，每个object包含phone，address两个字段，
+    "contacts": {
       "type": "array",
       "minItems": 1,
       "maxItems": 3,
@@ -51,7 +51,7 @@
             "type": "string",
             "minLength": 8,
             "maxLength": 11,
-            "pattern": "[0-9]"        //定义phone长度是8-11位，只能是0-9数字组合
+            "pattern": "[0-9]"
           },
           "address": {
             "type": "string"

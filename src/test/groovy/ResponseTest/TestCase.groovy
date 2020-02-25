@@ -77,6 +77,6 @@ class TestCase extends Specification {
         assertThat(payLoad, matchesJsonSchemaInClasspath(filePath))
         where:
         filePath                                                            | placeHolder
-        "./src/test/resources/com.spring.demo/schema/getResumeSchema2.json" | ""
+        "com.spring.demo/schema/getResumeSchema2.json" | ""
     }
 }
