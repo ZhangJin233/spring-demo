@@ -21,7 +21,7 @@ class AddXmlDataCase extends Specification {
     def "should add xml data successfully"() {
         given: "generate add xml data api request body"
         def reqBody = new AddXmlDataBody()
-                .setBookName("bookName-shanguo")
+                .setBookName("bookName-sanguo")
                 .setPrice(20)
                 .setAuthor("luoguanzhong")
                 .getAddXmlDataBody()
@@ -35,7 +35,7 @@ class AddXmlDataCase extends Specification {
     def "should add xml data with invalid bookName failed"() {
         given: "generate add xml data api request body"
         def reqBody = new AddXmlDataBody()
-                .setBookName("shanguo")
+                .setBookName("sanguo")      //mock接口的时候要求request body中bookName字段必须包含“bookName”字符串，这里设置的书名不正确，调用接口应该会失败
                 .setPrice(20)
                 .setAuthor("luoguanzhong")
                 .getAddXmlDataBody()
