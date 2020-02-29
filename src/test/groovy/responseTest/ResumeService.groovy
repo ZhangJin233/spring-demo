@@ -1,4 +1,4 @@
-package ResponseTest
+package responseTest
 
 import groovy.json.JsonSlurper
 

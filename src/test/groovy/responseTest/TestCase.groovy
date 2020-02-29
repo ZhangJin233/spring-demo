@@ -1,4 +1,4 @@
-package ResponseTest
+package responseTest
 
 import spock.lang.Specification
 import static org.hamcrest.MatcherAssert.assertThat

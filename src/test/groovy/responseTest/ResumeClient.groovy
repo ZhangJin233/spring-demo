@@ -1,4 +1,4 @@
-package ResponseTest
+package responseTest
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath
 import static io.restassured.RestAssured.given

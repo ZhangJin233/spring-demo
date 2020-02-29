@@ -1,4 +1,4 @@
-package XmlTest
+package xmlTest
 
 import org.apache.velocity.VelocityContext
 import org.apache.velocity.app.VelocityEngine

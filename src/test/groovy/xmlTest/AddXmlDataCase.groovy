@@ -1,4 +1,4 @@
-package XmlTest
+package xmlTest
 
 import spock.lang.Specification
 import static org.junit.jupiter.api.Assertions.assertEquals;

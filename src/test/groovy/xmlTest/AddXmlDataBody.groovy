@@ -1,4 +1,4 @@
-package XmlTest
+package xmlTest
 
 /**
  *
