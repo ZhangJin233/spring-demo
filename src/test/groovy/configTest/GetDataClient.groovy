@@ -12,10 +12,14 @@ import static io.restassured.RestAssured.given
  * */
 class GetDataClient {
     ConfigParser configParser
+    TestDataService testDataService
+    def users
     def configs
 
     GetDataClient() {
         configParser = new ConfigParser()
+        testDataService = new TestDataService()
+        users = testDataService.getUserDataByRole("ForGetDataApi")
         configs = configParser.getGlobalConfig()
     }
 
@@ -29,8 +33,23 @@ class GetDataClient {
         println res
     }
 
+    void getDataWithCsvUser(){
+        def res = given().baseUri((String) configs.mockServerUrl)
+                .auth().preemptive().basic(users.username,users.password)
+                .when()
+                .get("/api/getData")
+                .then().assertThat().statusCode(200)
+                .extract().response().getBody().asString()
+        println res
+    }
+
     @Test()
     void callGetData() {
         getData()
+    }
+
+    @Test()
+    void callGetDataWithCsvUser(){
+        getDataWithCsvUser()
     }
 }
