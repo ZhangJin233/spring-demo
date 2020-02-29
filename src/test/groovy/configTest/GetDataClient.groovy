@@ -45,7 +45,7 @@ class GetDataClient {
 
     void getDataWithEncryptPassword() {
         def res = given().baseUri((String) configs.mockServerUrl)
-                .auth().preemptive().basic(users.username, userTestData.getPasswordByUserName(users.username))
+                .auth().preemptive().basic(users.username, testDataService.getPasswordByUserName(users.username))
                 .when()
                 .get("/api/getData")
                 .then().assertThat().statusCode(200)
