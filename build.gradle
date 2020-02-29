@@ -64,9 +64,11 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
-
 test {
     systemProperty 'cucumber.options', '--plugin junit:target/surefire-reports/cucumber-junit.xml'
 //    include '**/*Test.class'
     useJUnitPlatform()
+}
+task testSuite(type: Test) {
+    include '**/FirstTestSuite.class'
 }
