@@ -23,4 +23,8 @@ class TestDataService {
     def getUserDataByRole(roleName) {
         getUserFileData().find { it -> it.roleName == roleName }
     }
+
+    def getPasswordByUserName(username) {
+        Secret.decrypt("apiTestStudy", (String) getUserFileData().find { it -> it.username == username }.password)
+    }
 }
