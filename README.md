@@ -1,5 +1,7 @@
 # spring-demo 功能：
 
+spring + gradle + REST assured + wiremock
+
 1、 wiremock 模拟测试接口
 
 2、REST assured 完成接口测试
